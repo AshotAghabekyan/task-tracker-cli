@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from 'path';
 import * as dotenv from "dotenv";
 import {Task} from "../model/task"
-import { taskStatus } from "../model/progressStatus";
+import { taskStatus } from "../model/taskStatus";
 import { FileService } from "./fileService";
 
 dotenv.config({"path": path.resolve(".env")})

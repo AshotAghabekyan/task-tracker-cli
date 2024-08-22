@@ -58,7 +58,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TaskService = void 0;
 var path = __importStar(require("path"));
 var dotenv = __importStar(require("dotenv"));
-var progressStatus_1 = require("../model/progressStatus");
+var taskStatus_1 = require("../model/taskStatus");
 var fileService_1 = require("./fileService");
 dotenv.config({ "path": path.resolve(".env") });
 var TaskService = /** @class */ (function () {
@@ -118,7 +118,7 @@ var TaskService = /** @class */ (function () {
                         return [4 /*yield*/, this.getAllTasks()];
                     case 1:
                         tasks = _a.sent();
-                        filteredTasks = tasks.filter(function (task) { return task.status == progressStatus_1.taskStatus.done; });
+                        filteredTasks = tasks.filter(function (task) { return task.status == taskStatus_1.taskStatus.done; });
                         return [2 /*return*/, filteredTasks || null];
                     case 2:
                         error_3 = _a.sent();
@@ -139,7 +139,7 @@ var TaskService = /** @class */ (function () {
                         return [4 /*yield*/, this.getAllTasks()];
                     case 1:
                         tasks = _a.sent();
-                        filteredTasks = tasks.filter(function (task) { return task.status == progressStatus_1.taskStatus.todo; });
+                        filteredTasks = tasks.filter(function (task) { return task.status == taskStatus_1.taskStatus.todo; });
                         return [2 /*return*/, filteredTasks || null];
                     case 2:
                         error_4 = _a.sent();
@@ -160,7 +160,7 @@ var TaskService = /** @class */ (function () {
                         return [4 /*yield*/, this.getAllTasks()];
                     case 1:
                         tasks = _a.sent();
-                        filteredTasks = tasks.filter(function (task) { return task.status == progressStatus_1.taskStatus.inProgress; });
+                        filteredTasks = tasks.filter(function (task) { return task.status == taskStatus_1.taskStatus.inProgress; });
                         return [2 /*return*/, filteredTasks || null];
                     case 2:
                         error_5 = _a.sent();
@@ -258,7 +258,7 @@ var TaskService = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 3, , 4]);
-                        if (status < progressStatus_1.taskStatus["todo"] || status > progressStatus_1.taskStatus["done"]) {
+                        if (status < taskStatus_1.taskStatus["todo"] || status > taskStatus_1.taskStatus["done"]) {
                             return [2 /*return*/, null];
                         }
                         return [4 /*yield*/, this.getAllTasks()];
