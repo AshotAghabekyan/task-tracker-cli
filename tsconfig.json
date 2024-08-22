@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./dist",  // указываем, куда компилировать файлы
+    "rootDir": "./",  // указываем корневую папку с исходными файлами
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
+
