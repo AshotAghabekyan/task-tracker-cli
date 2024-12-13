@@ -1,0 +1,19 @@
+{
+  "version": "4",
+  "specifiers": {
+    "npm:dotenv@^16.4.5": "16.4.7"
+  },
+  "npm": {
+    "dotenv@16.4.7": {
+      "integrity": "sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ=="
+    }
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@types/node@^22.10.2",
+        "npm:dotenv@^16.4.5"
+      ]
+    }
+  }
+}
